@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import * as XLSX from "xlsx";
 import "./App.css";
+import DictionaryView from "./dictionary_view";
+import Topbar from "./topbar";
+import Sidebar from "./sidebar";
 
 function Dictionary() {
   const [language, setLanguage] = useState([]);
@@ -128,8 +131,13 @@ function Dictionary() {
 
   return (
     <div>
-      <div className="dictionaryheader">DICTIONARY</div>
+     <Topbar/>
+
       <div className="dictionary">
+      
+      <Sidebar/>
+      <div className="table1">
+     <div className="tables">
         <table>
           <thead>
             <th>Category</th>
@@ -193,8 +201,16 @@ function Dictionary() {
             </td>
           </tbody>
         </table>
-      </div>
+        </div>
+
+        <div className="table2">
+        <DictionaryView/>
+        </div>
+   </div>
+
+   </div>
     </div>
+    
   );
 }
 
