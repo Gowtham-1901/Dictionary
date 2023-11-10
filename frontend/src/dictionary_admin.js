@@ -147,7 +147,7 @@ function Dictionary() {
             <th></th>
           </thead>
           <tbody>
-            <td>
+            <td className="body_content">
               <select value={selectedCategory} onChange={handleCategoryChange}>
                 <option value="">Select a category</option>
                 {categories.map((category, index) => (
@@ -157,7 +157,7 @@ function Dictionary() {
                 ))}
               </select>
             </td>
-            <td>
+            <td className="body_content">
               <select
                 value={selectedSubCategory}
                 onChange={handleSubCategoryChange}
@@ -170,7 +170,7 @@ function Dictionary() {
                 ))}
               </select>
             </td>
-            <td>
+            <td className="body_content">
               <select value={selectedLanguage} onChange={handleLanguageChange}>
                 <option value="">Select a language</option>
                 {language.map((language, index) => (

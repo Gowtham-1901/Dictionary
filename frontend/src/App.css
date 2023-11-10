@@ -4,31 +4,43 @@
   color: grey;
 }
 .dictionary table {
-  width: 73vw;
-  
+  width: 73vw; 
 }
 .tables table{
   background-color: white;
   margin-top: 20px;
   margin-left: 50px;
+  border-radius: 10px;
   
+}
+.tables th{
+  text-align: left;
+  padding-left: 15px;
 }
 .dictionary thead {
   font-weight: bold;
+  /* align-items: flex-start; */
   color: grey;
   height: 70px;
 } 
 .dictionary td {
   text-align: center;
   vertical-align: middle;
+  /* text-align: left; */
   /* padding-left: 30px; */
+}
+
+.body_content{
+  text-align: left;
+  align-items: flex-start;
 }
 .dictionary select {
   border-color: rgb(136, 133, 133);
   border-radius: 8px;
   border-width: 2px;
   height: 40px;
-  width: 200px;
+  width: 150px;
+  text-align:inherit;
 }
 .dictionary input {
   display: none;
@@ -67,12 +79,12 @@ border-radius: 40px;
 
 .table1{
   background-color: #F2FBFE;
-  margin-left: 15px;
+  margin-left: 25px;
   width: 100%;
 }
 
 .table2{
-  margin-top: 10%;
+  margin-top: 5%;
   align-items: center;
   align-content: center;
   width: 90%;
