@@ -16,13 +16,13 @@ function Dictionary() {
   const [excelFile, setExcelFile] = useState(null);
   const [typeError, setTypeError] = useState(null);
   const [fileName, setFileName] = useState("");
+  const[ischanged,setischanged]= useState("true")
 
   useEffect(() => {
     axios
       .get("http://localhost:9090/getcategory")
       .then((res) => {
         if (res.data && res.data.length > 0) {
-          // console.log(res.data);
           setCategories(res.data);
         }
       })
@@ -126,6 +126,11 @@ function Dictionary() {
       }
 
       uploadData(datas);
+      setischanged(!ischanged)
+      setSelectedCategory("");
+      setSelectedSubCategory("")
+      setSelectedLanguage("")
+      setFileName("")
     }
   };
 
@@ -204,7 +209,7 @@ function Dictionary() {
         </div>
 
         <div className="table2">
-        <DictionaryView/>
+        <DictionaryView ischanged={ischanged}/>
         </div>
    </div>
 

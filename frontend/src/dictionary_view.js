@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-function DictionaryView() {
+function DictionaryView({ischanged}) {
   const [data, setData] = useState([]);
   const [toggleStates, setToggleStates] = useState([]);
 
@@ -19,7 +19,7 @@ function DictionaryView() {
       .catch((error) => {
         console.error("Error:", error);
       });
-  }, []);
+  }, [ischanged]);
 
   const toggleSwitch = (index) => {
     const updatedToggleStates = [...toggleStates];
