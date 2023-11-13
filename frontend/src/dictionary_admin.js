@@ -35,12 +35,13 @@ function Dictionary() {
         if (res.data && res.data.length > 0) {
           // console.log(res.data);
           setLanguage(res.data);
+          setFileName("")
         }
       })
       .catch((error) => {
         console.error("Error:", error);
       });
-  }, []);
+  }, [ischanged]);
 
   const handleCategoryChange = (e) => {
     const category = e.target.value;
@@ -99,9 +100,6 @@ function Dictionary() {
       const datas = XLSX.utils.sheet_to_json(worksheet);
       // request
       function uploadData(datas) {
-        // console.log(selectedCategory);
-        // console.log(selectedSubCategory);
-        // console.log(datas);
         const jsondata = datas.map((item) => ({
           original_word: item.original_word,
           translated_word: item.translated_word,
@@ -130,7 +128,7 @@ function Dictionary() {
       setSelectedCategory("");
       setSelectedSubCategory("")
       setSelectedLanguage("")
-      setFileName("")
+      // setFileName("")
     }
   };
 
@@ -190,6 +188,7 @@ function Dictionary() {
                 {fileName || "Upload file"}
               </label>
               <input
+              className="input"
                 type="file"
                 accept=".xlsx"
                 id="file"

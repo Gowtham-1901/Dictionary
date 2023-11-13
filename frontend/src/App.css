@@ -14,26 +14,26 @@
   
 }
 .tables th{
+  border-bottom: 2px solid  #606060;
   text-align: center;
-  padding-left: 15px;
+  width: 100px;
 }
 .dictionary thead {
   font-weight: bold;
-  /* align-items: flex-start; */
   color: grey;
   height: 70px;
 } 
 .dictionary td {
   text-align: center;
   vertical-align: middle;
-  /* text-align: left; */
-  /* padding-left: 30px; */
+  height: 40px;
 }
 
 .body_content{
   text-align: left;
   align-items: flex-start;
 }
+
 .dictionary select {
   border-color: rgb(136, 133, 133);
   border-radius: 8px;
@@ -42,14 +42,17 @@
   width: 150px;
   text-align:inherit;
 }
-.dictionary input {
+
+.input {
   display: none;
 }
+
 .dictionary label:hover,
 .dictionary button:hover {
   color: orangered;
   background-color: transparent;
 }
+
 .dictionary button {
   height: 30px;
   width: 100px;
@@ -58,19 +61,7 @@
   background-color: orangered;
   color: white;
 }
-/* .dictionary{
-  display: flex;
-  align-items: center;
-border-radius: 40px;
 
-  margin-left: 15px;
-  height: 20px;
-  border-color: #636262;
-} */
-.view_dictionary{
-  display: flex;
-  flex-direction: row;
-}
 .dictionary{
   display: flex;
   flex-direction: row;
@@ -87,17 +78,30 @@ border-radius: 40px;
   margin-top: 5%;
   align-items: center;
   align-content: center;
-  width: 90%;
+  width: 90.5%;
   margin-left: 50px;
   background-color: white;
   border-radius: 10px;
 }
 
-.view_dictionary td {
-  border-bottom: 2px solid  #606060 ;
-
+.view_dictionary{
+  display: flex;
+  flex-direction: row;
 }
 
+.view_dictionary td {
+  border-bottom: 2px solid  #606060 ;
+}
+
+.view_dictionary th {
+  border-bottom: 2px solid  #606060 ;
+} 
+
+.view_dictionary td {
+  text-align: center;
+  vertical-align: middle;
+  width: 60px;
+}
 
 /* 
 .view_dictionaryheader {
@@ -141,9 +145,6 @@ border-radius: 40px;
   background-color: orangered;
   color: white;
 } */
-
-
-
 
 .switch {
   position: relative;
