@@ -216,7 +216,6 @@ input:checked + .slider:before {
   background-color: #2bb8e6;
   height: 15vh;
   display: flex;
-  /* overflow: auto; */
 }
 .logo {
   flex: 2;
@@ -280,16 +279,6 @@ input:checked + .slider:before {
     display: grid;
     place-items: center;
   }
-  /* .search {
-    width: 100%;
-  }
-  .notification{
-    width: 50%;
-    float: left;
-  }
-  .profile{
-    width: 50%;
-  } */
 }
 
 /* navbar */
